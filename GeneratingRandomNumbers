@@ -1,0 +1,15 @@
+# The formula below used to generate random numbers until a specific result is met, albeit taking a huge computing power and time
+
+
+
+
+Dim cell_range As Range
+Set cell_range = Range("A1:A24")
+
+Do Until Range("B1") = 0
+    For Each cell In cell_range
+    cell.Value = WorksheetFunction.RandBetween(1, 24)
+    Next cell
+Loop
+
+cell_range.Value = cell_range.Value
